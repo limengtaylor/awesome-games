@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<style>
+    a.backIndex{text-decoration: none;}
+    dl.helpTips dt {font-weight: bold;font-size: 18px;}
+    dl.helpTips dd {font-size: 14px;margin: 0;text-align: left;}
+</style>
+<body>
+    <div class="container">
+        <a class="backIndex" href="index.html">返回游戏</a>
+        <dl class="helpTips">
+            <dt>游戏规则：</dt>
+            <dd>1.开始时棋盘内随机出现两个词语，出现的词语仅可能为“黄漂”或“赋彩”；</dd>
+            <dd>2.玩家可以选择上下左右四个方向，若棋盘内的词语出现位移或合并，视为有效移动；</dd>
+            <dd>3.玩家选择的方向上若有相同的词语则合并，每次有效移动可以同时合并，但不可以连续合并；</dd>
+            <dd>4.合并所得的所有新生成词语想加即为该步的有效得分；</dd>
+            <dd>5.玩家选择的方向行或列前方有空格则出现位移；</dd>
+            <dd>6.每有效移动一步，棋盘的空位(无数字处)随机出现一个词语(依然可能为“黄漂”或“赋彩”)；</dd>
+            <dd>7.词语层级为：“黄漂”、“赋彩”、“创意”、“扬帆”、“文化”、“怡乐”、“艺术”、“养心”、“品味”、“幸福”、“家园”（即两个“黄漂”可以合成一个“赋彩”；两个“赋彩”合成一个“创意”，以此类推）；</dd>
+            <dd>8.棋盘被数字填满，无法进行有效移动，判负，游戏结束；</dd>
+            <dd>9.棋盘上出现“家园”，判胜，游戏结束。</dd>
+        </dl>
+    </div>
+</body>
+</html>

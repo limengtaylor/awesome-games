@@ -1,0 +1,441 @@
+/*
+* @Created by jachin on 2015/7/13.
+* @description: 中文说明
+* @author: jachin
+* @update: jachin (2015-07-13 12:32)
+*/
+
+/*
+  基本样式库 /css/core
+  通用UI元素样式库 /css/lib
+  JS组件相关样式库 /css/ui
+*/
+
+@charset "UTF-8";
+html { font-family: "Microsoft YaHei",San Francisco,Helvetica Neue,Helvetica, STHeiTi, Arial, sans-serif; -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; font-size: 62.5%; }
+body { margin: 0; font-size: 1.4rem; line-height: 1.5; color: #3b212c; background-color: #f2f2f2; height: 100%;
+    overflow-x: hidden; -webkit-overflow-scrolling: touch; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+audio, canvas, progress, video { display: inline-block; vertical-align: baseline; }
+audio:not([controls]) { display: none; height: 0; }
+[hidden], template { display: none; }
+svg:not(:root) { overflow: hidden; }
+
+a { background: transparent; text-decoration: none; -webkit-tap-highlight-color: transparent; color: #3890e1; }
+a:active { outline: 0; }
+a:active { color: #3890e1; }
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+dfn { font-style: italic; }
+mark { background: #ff0; color: #000; }
+small { font-size: 80%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+img { border: 0; vertical-align: middle; }
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+pre { overflow: auto; white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+i, cite, em, var, address{font-style: normal;outline: none;}
+button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0; }
+button { overflow: visible;outline: none;border: none; }
+button, select { text-transform: none; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
+button[disabled], html input[disabled] { cursor: default; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+input { line-height:normal;-webkit-appearance:none!important;border-radius: 0;-webkit-tap-highlight-color: rgba(255,255,255,0);}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {-webkit-appearance: none !important;margin: 0;height: auto; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+legend { border: 0; padding: 0; }
+textarea { overflow: auto;resize:none;}
+optgroup { font-weight: bold; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td, th { padding: 0; }
+
+html, button, input, select, textarea { font-family: "Microsoft YaHei",San Francisco,Helvetica Neue,Helvetica, STHeiTi, Arial, sans-serif; }
+h1, h2, h3, h4, h5, h6, p, figure, form, blockquote { margin: 0; }
+ul, ol, li, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none outside none; }
+h1, h2, h3 { line-height: 2; font-weight: normal; }
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.4rem; }
+input::-moz-placeholder, textarea::-moz-placeholder { color: #cccccc; }
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cccccc; }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #cccccc; }
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;outline: none;
+    -webkit-tap-highlight-color: rgba(255,255,255,0); }
+
+.clearfix:after { content:"."; height:0; visibility:hidden; display:block; clear:both; font-size:0; line-height:0; }
+.clearfix { display:inline-block; }
+.clearfix { display:block; }
+
+
+.drawh5-wrap{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-color: #ffdb45;
+}
+.luckypic{
+    width: 100%;
+    position: relative;
+}
+.rules-btn{
+    position: absolute;
+    right: 0.3125rem;
+    top:0;
+    width: 5.125rem;
+    height: 1.5625rem;
+    background-color: #ffdb45;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    font-size: 0.75rem;
+    text-align: center;
+}
+.rules-btn em{
+    display: inline-block;
+    vertical-align: -0.0625rem;
+}
+.iconrules{
+    display: inline-block;
+    width: 0.5625rem;
+}
+
+.drawmsg{
+    width: 100%;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    padding: 0 1.5625rem 0.625rem 1.5625rem;
+    font-size: 0.5625rem;
+    white-space:nowrap;
+    overflow: hidden;
+}
+.drawh5-game{
+    position: relative;
+    width: 96.875%;
+    margin: 0 auto;
+    border-bottom: 0.5rem solid #da0017;
+    border-radius: 0.5rem;
+    background-color: #da0017;
+    font-size: 0.75rem;
+
+}
+.game-wrapper{
+    background-color: #fc4235;
+    border-radius: 0.5rem;
+    padding: 0.75rem 0.625rem ;
+}
+.game-overflow{
+    background-color: #da0017;
+    border-radius: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 17.84rem;
+    margin: 0 auto;
+}
+.sudoku li {
+    width: 5.78rem;
+    height: 4.5625rem;
+    float: left;
+    text-align: center;
+    margin-left: 0.125rem;
+    margin-top: 0.125rem;
+}
+.sudoku li .unit-wrap {
+    width: 5.78rem;
+    height: 4.5625rem;
+    background-color: #febdbb;
+    border-radius: 0.5rem;
+}
+.sudoku li .unit-wrap .unit-item {
+    width: 5.78rem;
+    height: 4.1625rem;
+    padding-top: 0.125rem;
+    background-color: #feeeee;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    color: #3b212c;
+}
+.sudoku .active{
+    width: 5.78rem;
+    height: 4.5625rem;
+    border-radius: 0.5rem;
+    border: 0.25rem solid #ff9c00;
+    background-color: #ff9c00;
+}
+.sudoku .active .unit-wrap{
+    width: 5.23rem;
+    height: 4.0625rem;
+}
+.sudoku .active .unit-wrap .unit-item{
+    width: 5.23rem;
+    height: 3.85rem;
+}
+
+.sudoku li .pic{
+    width: 3.75rem;
+    margin: 0 auto;
+}
+
+.sudoku .lottery-start a{
+    display: block;
+    width: 5.75rem;
+    height: 9.1875rem;
+    position: relative;
+}
+.sudoku .lottery-start div {
+    font-size: 0.5625rem;
+    color: #fff;
+    width: 5.625rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    background-color: #da0017;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 1.125rem;
+    left: 0.0625rem;
+}
+.sudoku .lottery-start div em {
+    font-size: 0.75rem;
+    color: #ffd202;
+}
+.user-prize{
+    width: 6.4rem;
+    height: 1.75rem;
+    line-height: 1.5rem;
+    font-size: 0.75rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    background-color: #ffdb45;
+    margin: 0.5rem auto 0;
+}
+.user-prize em{display: inline-block; vertical-align: -0.09375rem;}
+.iconprize{
+    display: inline-block;
+    width: 0.625rem;
+}
+.footer{
+    width: 100%;
+    height: 5.75rem;
+    padding-top: 1.25rem;
+    background-color: #de9d04;
+    font-size: 0.625rem;
+    text-align: center;
+    margin-top: -1.875rem;
+}
+.footer div{
+    width: 100%;
+    height: 1.25rem;
+    border-radius: 1.25rem;
+    background-color: #b45d00;
+    margin-bottom: 0.5rem;
+}
+
+/*dialog*/
+
+/*弹窗*/
+.dialog-wrap{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -7.15625rem;
+    margin-left: -7.15625rem;
+    z-index: 9999;
+}
+.mask{
+    position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: #000;opacity: 0.6;z-index: 99;
+}
+.draw-dialog-bg{
+    position: relative;
+    width: 14.3125rem;
+    height: 14.3125rem;
+    background: url("../img/drawpc_dialog.png") no-repeat;
+    background-size:100% auto;
+    z-index: 9999;
+}
+.draw-dialog-bg .diclose{
+    position: absolute;
+    top: -0.25rem;
+    right: 1.25rem;
+    width: 1.3125rem;
+}
+.ddialog{
+    text-align: center;
+    font-size: 0.5625rem;
+}
+.ddialog .words{
+    color: #3b212c;
+    width: 11rem;
+    margin: 0 auto;
+    padding-top: 2.5rem;
+}
+.ddialog .words p {
+    margin-bottom: 0.5rem;
+    line-height: 1rem;
+}
+.ddialog .words em{
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+.ddialog .share-tips{
+    width: 7.0625rem;
+    position: absolute;
+    top:11rem;
+    left: 3.125rem;
+    text-align: left;
+}
+.ddialog .btns{
+    position: absolute;
+    left: 1.2rem;
+    bottom: 1.9375rem;
+    text-align: center;
+    width: 9.5rem;
+}
+.ddialog .btns a{
+    display: inline-block;
+    font-size: 0.5625rem;
+    padding: 0 0.625rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    color: #fff;
+    margin-left: 0.4375rem;
+    background-color: #ff7900;
+    border-bottom: 0.125rem solid #d43700;
+    border-radius: 0.25rem;
+}
+
+.ddialog .btns .usetickets{
+    background-color: #ff9c00;
+    border-bottom: 0.125rem solid #ff7900;
+    padding: 0 0.5rem;
+    margin-left: 0.4rem;
+}
+
+/*活动规则*/
+.rule-wrap{
+    display: none;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 100%;
+}
+.drawh5-rule{
+    width: 96.875%;
+    margin: 0 auto;
+    background-color: #ffe67f;
+    position: relative;
+    z-index: 999;
+    padding: 0.75rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.5625rem;
+}
+.tit-name{
+    width: 6.4375rem;
+    height: 1.6875rem;
+    line-height: 1.625rem;
+    font-size: 0.875rem;
+    color: #3b212c;
+    background-color: #de9d04;
+    margin-bottom:  0.5rem;
+    margin-left:  0.5rem;
+    border-radius: 0.25rem;
+    text-align: center;
+}
+.tit-name em{
+    display: inline-block;
+    vertical-align: -0.1rem;
+    font-weight: bold;
+}
+.drawh5-rule p {
+    color: #3b212c;
+    font-size: 0.5625rem;
+    padding-left: 0.625rem;
+    position: relative;
+}
+.drawh5-rule p i {
+    display: inline-block;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 0.25rem;
+    vertical-align: 0.0625rem;
+    background-color: #3b212c;
+    position: absolute;
+    left: 0;
+    top: 0.3125rem;
+}
+.rule-close{
+    width: 1.3125rem;
+    position: absolute;
+    right: 0.5rem;
+    top:0.75rem;
+}
+
+/*我的奖品弹窗*/
+.prize-wrap{
+    display: none;
+    position: fixed;
+    top:2rem;
+    left: 0;
+    width: 100%;
+}
+
+.prizes{
+    position: relative;
+    z-index: 999;
+    width: 14.375rem;
+    min-height: 8rem;
+    margin: 0 auto;
+    padding:0.625rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    background-color: #ffe67f;
+}
+.prize-wrap dl{
+    padding-top: 1rem;
+}
+.prize-wrap dd{
+    padding-left: 2rem;
+    width: 10rem;
+}
+.prize-wrap dd em{
+    float: right;
+}
+.prizes p {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+.prizes p a{
+    display: block;
+    color: #3b212c;
+    text-decoration: underline;
+}
+.prize-wrap .noprize{
+    width: 3rem;
+    height: 4rem;
+    margin:  2rem auto;
+}
+
+
+.sudoku .lottery-disabled a img,
+.sudoku .lottery-disabled a div{
+    display: none;
+}
+.sudoku .lottery-disabled a{
+    background: #bababa;
+    font-size: 2rem;
+    color: #666;
+    padding-top: 2.5rem;
+    line-height: 2rem;
+    border-radius: 0.5rem;
+}
+
+

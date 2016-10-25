@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors jachin (zx.wang@ctrip.com)
+ * @date    2016-04-16 22:12:08
+ * @version $Id$
+ */
+
+.demo{
+  font-size:12px;
+  width:300px;
+  height:300px;
+  margin: 20px auto;
+  text-align:center;
+}
+
