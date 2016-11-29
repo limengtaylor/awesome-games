@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>刮刮乐</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/scratch.css" rel="stylesheet">
+  <script src="./js/zepto.min.js">
+  </script>
+  <script src='./js/data.js'>
+  </script>
+  <!--<script src="./js/jquery-1.8.3.min.js">-->
+  </script>
+</head>
+
+<body>
+  <div id="content">
+    <h1 id="plugin-name">scratch.js</h1>
+
+    <div class="content-box">
+
+      <div id="demo1" class="scratchpad"></div>
+      <div id="demo1-percent">&nbsp;</div>
+      <input type="button" value="Reset" onclick="$('#demo1').scratch('reset');" />
+      <input type="button" value="Clear" onclick="$('#demo1').scratch('clear');" />
+      <input type="button" value="Enable" onclick="$('#demo1').scratch('enable', true);" />
+      <input type="button" value="Disable" onclick="$('#demo1').scratch('enable', false);" />
+
+      <h3>Clear After 70 Percent Scratched</h3>
+      <div id="demo2" class="scratchpad"></div>
+      <div id="demo2-percent">&nbsp;</div>
+      <input type="button" value="Reset" onclick="$('#demo2').scratch('reset');" />
+      <input type="button" value="Clear" onclick="$('#demo2').scratch('clear');" />
+      <input type="button" value="Enable" onclick="$('#demo2').scratch('enable', true);" />
+      <input type="button" value="Disable" onclick="$('#demo2').scratch('enable', false);" />
+
+      <style>
+        .scratchpad {
+          width: 35%;
+          height: 100px;
+          border: solid 1px;
+        }
+        
+        @media (max-width: 500px) {
+          .scratchpad {
+            width: 65%;
+          }
+        }
+      </style>
+
+      <script type="text/javascript" src="./js/scratch.js"></script>
+      <script type="text/javascript">
+        $('#demo1').scratch({
+          'cursor': 'url("./img/coin.png") 5 5, default',
+          scratchMove: function(e, percent) {
+            $('#demo1-percent').html(percent);
+          }
+        });
+
+        $('#demo2').scratch({
+          'cursor': 'url("./img/coin.png") 5 5, default',
+          scratchMove: function(e, percent) {
+            $('#demo2-percent').html(percent);
+
+            if (percent > 70) {
+              this.clear();
+            }
+          }
+        });
+      </script>
+
+    </div>
+  </div>
+</body>
+
+</html>
