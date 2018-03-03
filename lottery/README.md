@@ -1,3 +1,6 @@
 ### 9宫格游戏
 
 通过对原有的9宫格游戏进行了二次开发，做到了既支持jquery也支持zepto，对于pc以及H5都能试用，同时增加了运行中的回调函数，以便后台数据返回后能够控制9宫格跳跃的节奏，使整个9宫格转动的过程更符合实际场景逻辑。
+<html>
+  <a href="https://limengtaylor.github.io/lottery/index.html">点我看效果</a>
+</html>
